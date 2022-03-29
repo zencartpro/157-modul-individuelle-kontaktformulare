@@ -1,5 +1,5 @@
 ##################################################################################
-# UNINSTALL Individuelle Kontaktformulare 1.2.0 - 2019-02-23 - webchills
+# UNINSTALL Individuelle Kontaktformulare 1.3.0 - 2022-03-24 - webchills
 # UNINSTALL - NUR AUSFÜHREN WENN SIE DAS MODUL KOMPLETT ENTFERNEN WOLLEN!
 ##################################################################################
 

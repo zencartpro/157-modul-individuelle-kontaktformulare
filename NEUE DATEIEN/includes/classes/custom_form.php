@@ -12,7 +12,7 @@
  * @Dev End Date: Friday, June 15 2018
  * @Last Update: Friday, July 6 2018
  * @Version: 1.4.0
- * updated for Zen Cart 1.5.7 German and PHP 8 2022-02-28 webchills
+ * updated for Zen Cart 1.5.7 German and PHP 8 2022-03-24 webchills
  */
  
 class custom_form extends base{
@@ -72,12 +72,8 @@ class custom_form extends base{
 		}
 		
 		#LOCATION OF IMAGES FOLDER
-		$this->images_folder = DIR_FS_CATALOG . DIR_WS_IMAGES . 'uploads/';
-		if( strtolower(ENABLE_SSL) == 'true' ){
-			$this->images_url = HTTPS_SERVER . DIR_WS_HTTPS_CATALOG . DIR_WS_IMAGES . 'uploads/';
-		}else{
-			$this->images_url = HTTP_SERVER . DIR_WS_CATALOG . DIR_WS_IMAGES . 'uploads/';
-		}
+		$this->images_folder = DIR_FS_CATALOG . 'images/uploads/';		
+		$this->images_url = HTTPS_SERVER . DIR_WS_HTTPS_CATALOG . 'images/uploads/';		
 		
 		
 		#LOAD REQUIRED FIELDS ARRAY

@@ -1,10 +1,10 @@
 <?php
 /**
  * @package Individuelle Kontaktformulare
- * @copyright Copyright 2003-2019 Zen Cart Development Team
+ * @copyright Copyright 2003-2022 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: 1_2_0.php 2019-02-22 11:13:51Z webchills $
+ * @version $Id: 1_2_0.php 2022-03-24 15:46:51Z webchills $
  */
  
 $db->Execute("CREATE TABLE IF NOT EXISTS " . TABLE_CUSTOM_FORMS . " (
@@ -71,7 +71,7 @@ $db->Execute("CREATE TABLE IF NOT EXISTS " . TABLE_CUSTOM_FORMS_REQUESTS . " (
  `status` varchar(32) DEFAULT NULL,
  `message_timestamp` datetime DEFAULT NULL,
  PRIMARY KEY (`request_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;");
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;");
  
 $db->Execute(" SELECT @gid:=configuration_group_id
 FROM ".TABLE_CONFIGURATION_GROUP."
