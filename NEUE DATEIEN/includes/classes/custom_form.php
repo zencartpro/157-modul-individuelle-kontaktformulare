@@ -12,7 +12,7 @@
  * @Dev End Date: Friday, June 15 2018
  * @Last Update: Friday, July 6 2018
  * @Version: 1.4.0
- * updated for Zen Cart 1.5.7 German and PHP 8 2022-03-24 webchills
+ * updated for Zen Cart 1.5.7 German and PHP 8 2022-04-17 webchills
  */
  
 class custom_form extends base{
@@ -779,13 +779,12 @@ class custom_form extends base{
 					if( $value["type"][0] != '' and !in_array($value["type"][0], $this->acceptable_file_types) ) {
 						//ADD MESSAGE STACK
 						$messageStack->add_session('custom_form',MESSAGE_FILE_TYPE_ERROR, 'error');
-					}else if( $value['error'][0] == 'UPLOAD_ERROR_OK' ){
+					}else {
 						$temp = $value["tmp_name"][0];
 						$name = basename($value["name"][0]);
 						$new_name = date("Ymd-His-") . rand(101,999) . '.' . pathinfo($value["name"][0], PATHINFO_EXTENSION);
 						$file_uploads[] = array(
-								'field'	=> $fieldName,
-								'tmp'	=> $tmp,
+								'field'	=> $fieldName,								
 								'name'	=> $name,
 								'new_name' => $new_name
 							);
