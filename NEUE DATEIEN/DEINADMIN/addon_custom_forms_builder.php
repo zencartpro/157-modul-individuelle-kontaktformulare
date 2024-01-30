@@ -1,7 +1,7 @@
 <?php
 /**
  * Custom Forms plug-in
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * Zen Cart German Version - www.zen-cart-pro.at
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
@@ -10,7 +10,7 @@
  * @Dev Start Date: Wednesday, May 30 2018
  * @Dev End Date:   Friday, June 15 2018
  * @Last Update:	July 5 2019
- * @updated for Zen Cart 1.5.7 German and PHP8 2022-02-28 webchills $
+ * @updated for Zen Cart 1.5.7g German and PHP 8.1 2024-01-30 webchills $
  */
 	require('includes/application_top.php');
 	
@@ -63,103 +63,11 @@
 <!doctype html>
 <html <?php echo HTML_PARAMS; ?>>
   <head>
-    <meta charset="<?php echo CHARSET; ?>">
-    <title><?php echo TITLE; ?></title>
-    <link rel="stylesheet" href="includes/stylesheet.css">
-    <link rel="stylesheet" href="includes/cssjsmenuhover.css" media="all" id="hoverJS">
-    <script src="includes/menu.js"></script>
-    <script src="includes/general.js"></script>
-    <script>
-      function init() {
-          cssjsmenu('navbar');
-          if (document.getElementById) {
-              var kill = document.getElementById('hoverJS');
-              kill.disabled = true;
-          }
-      }
-    </script>
-<style type="text/css">
-	.info-labels{
-		display:inline-block;
-		width:90px;
-		margin-left:10px;
-	}
-	.info-label-head{
-		font-size:16px;
-		color:#F66438;
-		margin:10px 0 5px 10px;
-	}
-	.info-label-head2{
-		font-size:14px;
-		color:#777;
-		margin:10px;
-		padding-top:5px;
-		display:block;
-		border-top:solid 2px WhiteSmoke;
-	}
-	.frm-emails, .frm-description{
-		max-width:calc(100% - 110px);
-		vertical-align:top;
-	}
-	.infoBoxContent p{
-		font-size:14px;
-		margin:5px;
-		padding:5px;
-		background-color:white;
-		color:##05316F;
-		border:solid 1px #F66438;
-		border-radius:5px;
-	}
-	.table-listing-display{
-		width:100%;
-	}
-	.table-listing-display th{
-		padding:2px 5px;
-		background-color:Gainsboro;
-	}
-	.table-listing-display td{
-		padding:2px 5px;
-		border:solid 1px Gainsboro;
-	}
-	.listBox{
-		border:solid 1px Silver;
-		background-color:white;
-		margin:2px 5px;
-		padding:5px;
-	}
-	.listBox a{
-		float:right;
-	}
-	#tblReport{
-		width:100%;
-	}
-	#tblReport th, #tblReport td{
-		padding:2px 5px;
-		margin:10px 0;
-	}
-	#tblReport th{
-		text-align:left;
-	}
-	#tblReport tr{
-		background-color:Gainsboro;
-	}
-	#tblReport .evenRow{
-		background-color:White;
-	}
-	#tblReport .oddRow{
-		background-color:WhiteSmoke;
-	}
-	#widgetBox, #linkBox{
-		border:solid 1px White;
-		border-radius:5px;
-		background-color:WhiteSmoke;
-		padding:5px;
-		margin:5px;
-	}
-</style>
+    <?php require DIR_WS_INCLUDES . 'admin_html_head.php'; ?>
+
 <?php if ( $editor_handler != '' ) include ($editor_handler); ?>
 </head>
-<body onLoad="init()">
+<body>
 <!-- header //-->
 <?php require(DIR_WS_INCLUDES . 'header.php'); ?>
 <!-- header_eof //-->
@@ -1646,4 +1554,4 @@
 	}
 </script>
 </html>
-<?php require(DIR_WS_INCLUDES . 'application_bottom.php'); ?>
+<?php require DIR_WS_INCLUDES . 'application_bottom.php'; ?>
